@@ -26,6 +26,36 @@ C:\Users\lukas\OneDrive - Aarhus Universitet\4. Semester\FED\Assignments\Assignm
 C:\Users\lukas\OneDrive - Aarhus Universitet\4. Semester\FED\Assignments\Assignment1\DebtBook\DebtBook\obj\Debug\net6.0-windows\ref\DebtBook.dll
 C:\Users\lukas\OneDrive - Aarhus Universitet\4. Semester\FED\Assignments\Assignment1\DebtBook\DebtBook\obj\Debug\net6.0-windows\DebtBook.pdb
 C:\Users\lukas\OneDrive - Aarhus Universitet\4. Semester\FED\Assignments\Assignment1\DebtBook\DebtBook\obj\Debug\net6.0-windows\DebtBook.genruntimeconfig.cache
+D:\Programming\School\FED-Assignment1\DebtBook\DebtBook\obj\Debug\net6.0-windows\DebtBook.csproj.AssemblyReference.cache
+D:\Programming\School\FED-Assignment1\DebtBook\DebtBook\obj\Debug\net6.0-windows\Views\AddDebtorDialog.g.cs
+D:\Programming\School\FED-Assignment1\DebtBook\DebtBook\obj\Debug\net6.0-windows\Views\MainWindow.g.cs
+D:\Programming\School\FED-Assignment1\DebtBook\DebtBook\obj\Debug\net6.0-windows\App.g.cs
+D:\Programming\School\FED-Assignment1\DebtBook\DebtBook\obj\Debug\net6.0-windows\DebtBook_MarkupCompile.cache
+D:\Programming\School\FED-Assignment1\DebtBook\DebtBook\obj\Debug\net6.0-windows\DebtBook_MarkupCompile.lref
+D:\Programming\School\FED-Assignment1\DebtBook\DebtBook\obj\Debug\net6.0-windows\DebtBook.dll
+D:\Programming\School\FED-Assignment1\DebtBook\DebtBook\obj\Debug\net6.0-windows\DebtBook.pdb
+D:\Programming\School\FED-Assignment1\DebtBook\DebtBook\bin\Debug\net6.0-windows\DebtBook.exe
+D:\Programming\School\FED-Assignment1\DebtBook\DebtBook\bin\Debug\net6.0-windows\DebtBook.deps.json
+D:\Programming\School\FED-Assignment1\DebtBook\DebtBook\bin\Debug\net6.0-windows\DebtBook.runtimeconfig.json
+D:\Programming\School\FED-Assignment1\DebtBook\DebtBook\bin\Debug\net6.0-windows\DebtBook.dll
+D:\Programming\School\FED-Assignment1\DebtBook\DebtBook\bin\Debug\net6.0-windows\DebtBook.pdb
+D:\Programming\School\FED-Assignment1\DebtBook\DebtBook\bin\Debug\net6.0-windows\Microsoft.Xaml.Behaviors.dll
+D:\Programming\School\FED-Assignment1\DebtBook\DebtBook\bin\Debug\net6.0-windows\Prism.dll
+D:\Programming\School\FED-Assignment1\DebtBook\DebtBook\bin\Debug\net6.0-windows\Prism.Unity.Wpf.dll
+D:\Programming\School\FED-Assignment1\DebtBook\DebtBook\bin\Debug\net6.0-windows\Prism.Wpf.dll
+D:\Programming\School\FED-Assignment1\DebtBook\DebtBook\bin\Debug\net6.0-windows\Unity.Abstractions.dll
+D:\Programming\School\FED-Assignment1\DebtBook\DebtBook\bin\Debug\net6.0-windows\Unity.Container.dll
+D:\Programming\School\FED-Assignment1\DebtBook\DebtBook\obj\Debug\net6.0-windows\Views\AddDebtorDialog.baml
+D:\Programming\School\FED-Assignment1\DebtBook\DebtBook\obj\Debug\net6.0-windows\Views\MainWindow.baml
+D:\Programming\School\FED-Assignment1\DebtBook\DebtBook\obj\Debug\net6.0-windows\DebtBook.g.resources
+D:\Programming\School\FED-Assignment1\DebtBook\DebtBook\obj\Debug\net6.0-windows\DebtBook.GeneratedMSBuildEditorConfig.editorconfig
+D:\Programming\School\FED-Assignment1\DebtBook\DebtBook\obj\Debug\net6.0-windows\DebtBook.AssemblyInfoInputs.cache
+D:\Programming\School\FED-Assignment1\DebtBook\DebtBook\obj\Debug\net6.0-windows\DebtBook.AssemblyInfo.cs
+D:\Programming\School\FED-Assignment1\DebtBook\DebtBook\obj\Debug\net6.0-windows\DebtBook.csproj.CoreCompileInputs.cache
+D:\Programming\School\FED-Assignment1\DebtBook\DebtBook\obj\Debug\net6.0-windows\DebtBook.csproj.CopyComplete
+D:\Programming\School\FED-Assignment1\DebtBook\DebtBook\obj\Debug\net6.0-windows\refint\DebtBook.dll
+D:\Programming\School\FED-Assignment1\DebtBook\DebtBook\obj\Debug\net6.0-windows\DebtBook.genruntimeconfig.cache
+D:\Programming\School\FED-Assignment1\DebtBook\DebtBook\obj\Debug\net6.0-windows\ref\DebtBook.dll
 C:\Users\lukas\OneDrive - Aarhus Universitet\4. Semester\FED\Assignments\Repo\FED-Assignment1\DebtBook\DebtBook\bin\Debug\net6.0-windows\DebtBook.exe
 C:\Users\lukas\OneDrive - Aarhus Universitet\4. Semester\FED\Assignments\Repo\FED-Assignment1\DebtBook\DebtBook\bin\Debug\net6.0-windows\DebtBook.deps.json
 C:\Users\lukas\OneDrive - Aarhus Universitet\4. Semester\FED\Assignments\Repo\FED-Assignment1\DebtBook\DebtBook\bin\Debug\net6.0-windows\DebtBook.runtimeconfig.json
@@ -56,3 +86,4 @@ C:\Users\lukas\OneDrive - Aarhus Universitet\4. Semester\FED\Assignments\Repo\FE
 C:\Users\lukas\OneDrive - Aarhus Universitet\4. Semester\FED\Assignments\Repo\FED-Assignment1\DebtBook\DebtBook\obj\Debug\net6.0-windows\ref\DebtBook.dll
 C:\Users\lukas\OneDrive - Aarhus Universitet\4. Semester\FED\Assignments\Repo\FED-Assignment1\DebtBook\DebtBook\obj\Debug\net6.0-windows\DebtBook.pdb
 C:\Users\lukas\OneDrive - Aarhus Universitet\4. Semester\FED\Assignments\Repo\FED-Assignment1\DebtBook\DebtBook\obj\Debug\net6.0-windows\DebtBook.genruntimeconfig.cache
+D:\Programming\School\FED-Assignment1\DebtBook\DebtBook\obj\Debug\net6.0-windows\App.baml

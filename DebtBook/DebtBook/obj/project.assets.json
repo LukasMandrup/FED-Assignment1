@@ -335,23 +335,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\lukas\\.nuget\\packages\\": {},
+    "C:\\Users\\simbj\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\lukas\\OneDrive - Aarhus Universitet\\4. Semester\\FED\\Assignments\\Repo\\FED-Assignment1\\DebtBook\\DebtBook\\DebtBook.csproj",
+      "projectUniqueName": "D:\\Programming\\School\\FED-Assignment1\\DebtBook\\DebtBook\\DebtBook.csproj",
       "projectName": "DebtBook",
-      "projectPath": "C:\\Users\\lukas\\OneDrive - Aarhus Universitet\\4. Semester\\FED\\Assignments\\Repo\\FED-Assignment1\\DebtBook\\DebtBook\\DebtBook.csproj",
-      "packagesPath": "C:\\Users\\lukas\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\lukas\\OneDrive - Aarhus Universitet\\4. Semester\\FED\\Assignments\\Repo\\FED-Assignment1\\DebtBook\\DebtBook\\obj\\",
+      "projectPath": "D:\\Programming\\School\\FED-Assignment1\\DebtBook\\DebtBook\\DebtBook.csproj",
+      "packagesPath": "C:\\Users\\simbj\\.nuget\\packages\\",
+      "outputPath": "D:\\Programming\\School\\FED-Assignment1\\DebtBook\\DebtBook\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\lukas\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\simbj\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -409,7 +409,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.200\\RuntimeIdentifierGraph.json"
       }
     }
   }

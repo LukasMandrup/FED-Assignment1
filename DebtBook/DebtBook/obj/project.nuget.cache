@@ -1,17 +1,17 @@
 {
   "version": 2,
-  "dgSpecHash": "DEkaI+RrpItG9V77a++ojeVXaIcNOPlOiGu5QAcCN5Ya+7MR4ztBN0AxmdpXZNzrUXkOHe4WTWK20zykafblhA==",
+  "dgSpecHash": "Cf9wPVbsvua4/kuC4HbJG57PYpOVbm2pTbjPaadiAdk1iM4o4o89cz1bZjjyJy64T8YgCXWEAJ5LJBBzaikSxA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\lukas\\OneDrive - Aarhus Universitet\\4. Semester\\FED\\Assignments\\Repo\\FED-Assignment1\\DebtBook\\DebtBook\\DebtBook.csproj",
+  "projectFilePath": "D:\\Programming\\School\\FED-Assignment1\\DebtBook\\DebtBook\\DebtBook.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\lukas\\.nuget\\packages\\microsoft.xaml.behaviors.wpf\\1.1.31\\microsoft.xaml.behaviors.wpf.1.1.31.nupkg.sha512",
-    "C:\\Users\\lukas\\.nuget\\packages\\prism.core\\8.1.97\\prism.core.8.1.97.nupkg.sha512",
-    "C:\\Users\\lukas\\.nuget\\packages\\prism.unity\\8.1.97\\prism.unity.8.1.97.nupkg.sha512",
-    "C:\\Users\\lukas\\.nuget\\packages\\prism.wpf\\8.1.97\\prism.wpf.8.1.97.nupkg.sha512",
-    "C:\\Users\\lukas\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\4.5.2\\system.runtime.compilerservices.unsafe.4.5.2.nupkg.sha512",
-    "C:\\Users\\lukas\\.nuget\\packages\\system.threading.tasks.extensions\\4.5.2\\system.threading.tasks.extensions.4.5.2.nupkg.sha512",
-    "C:\\Users\\lukas\\.nuget\\packages\\unity.abstractions\\5.11.7\\unity.abstractions.5.11.7.nupkg.sha512",
-    "C:\\Users\\lukas\\.nuget\\packages\\unity.container\\5.11.11\\unity.container.5.11.11.nupkg.sha512"
+    "C:\\Users\\simbj\\.nuget\\packages\\microsoft.xaml.behaviors.wpf\\1.1.31\\microsoft.xaml.behaviors.wpf.1.1.31.nupkg.sha512",
+    "C:\\Users\\simbj\\.nuget\\packages\\prism.core\\8.1.97\\prism.core.8.1.97.nupkg.sha512",
+    "C:\\Users\\simbj\\.nuget\\packages\\prism.unity\\8.1.97\\prism.unity.8.1.97.nupkg.sha512",
+    "C:\\Users\\simbj\\.nuget\\packages\\prism.wpf\\8.1.97\\prism.wpf.8.1.97.nupkg.sha512",
+    "C:\\Users\\simbj\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\4.5.2\\system.runtime.compilerservices.unsafe.4.5.2.nupkg.sha512",
+    "C:\\Users\\simbj\\.nuget\\packages\\system.threading.tasks.extensions\\4.5.2\\system.threading.tasks.extensions.4.5.2.nupkg.sha512",
+    "C:\\Users\\simbj\\.nuget\\packages\\unity.abstractions\\5.11.7\\unity.abstractions.5.11.7.nupkg.sha512",
+    "C:\\Users\\simbj\\.nuget\\packages\\unity.container\\5.11.11\\unity.container.5.11.11.nupkg.sha512"
   ],
   "logs": []
 }

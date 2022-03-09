@@ -4,6 +4,63 @@
              xmlns:local="clr-namespace:DebtBook"
              StartupUri="Views/MainWindow.xaml">
     <Application.Resources>
-         
+        <SolidColorBrush x:Key="BackgroundPrimary" Color="#BE0A2C3E"/>
+        <SolidColorBrush x:Key="BackgroundSecondary" Color="#C70B4356"/>
+        <SolidColorBrush x:Key="TextPrimary" Color="White"/>
+        
+        
+        
+        <Style TargetType="{x:Type Grid}">
+            <Setter Property="Background" Value="{StaticResource BackgroundPrimary}"/>
+        </Style> 
+        
+        <Style TargetType="{x:Type Label}">
+            <Setter Property="Background" Value="{StaticResource BackgroundSecondary}"/>
+            <Setter Property="Foreground" Value="{StaticResource TextPrimary}"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="BorderBrush" Value="{StaticResource BackgroundPrimary}"/>
+            <Setter Property="Margin" Value="1"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+        </Style>
+        
+        <Style x:Key="AddDebtorLabels" TargetType="{x:Type Label}">
+            <Setter Property="Background" Value="#48626f"/>
+            <Setter Property="Foreground" Value="{StaticResource TextPrimary}"/>
+            <Setter Property="Margin" Value="1"/>
+            <Setter Property="FontSize" Value="13"/>
+        </Style>
+        
+        <Style TargetType="{x:Type ListBox}">
+            <Setter Property="Background" Value="{StaticResource BackgroundSecondary}"/>
+            <Setter Property="Foreground" Value="{StaticResource TextPrimary}"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="FontFamily" Value="Calibri"/>
+            <Setter Property="BorderThickness" Value="2 2 2 2"/>
+            <Setter Property="BorderBrush" Value="DarkCyan"/>
+            <Setter Property="Margin" Value="5 15 5 5"/>
+        </Style>
+        
+        <Style TargetType="{x:Type TextBox}">
+            <Setter Property="Background" Value="{StaticResource BackgroundSecondary}"/>
+            <Setter Property="Foreground" Value="{StaticResource TextPrimary}"/>
+            <Setter Property="FontSize" Value="13"/>
+            <Setter Property="Height" Value="17"/>
+            <Setter Property="FontFamily" Value="Calibri"/>
+            <Setter Property="BorderBrush" Value="#33FFFFFF"/>
+        </Style>
+        
+        
+        
+        <Style TargetType="{x:Type Button}">
+            <Setter Property="Background" Value="{StaticResource BackgroundSecondary}"/>
+            <Setter Property="Foreground" Value="{StaticResource TextPrimary}"/>
+            <Setter Property="FontSize" Value="13"/>
+            <Setter Property="Height" Value="auto"/>
+            <Setter Property="MinWidth" Value="70"/>
+            <Setter Property="FontFamily" Value="Calibri"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="BorderBrush" Value="#E3FFFFFF"/>
+        </Style>
     </Application.Resources>
 </Application>
