@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         xmlns:prism="http://prismlibrary.com/"
         prism:ViewModelLocator.AutoWireViewModel="True"
-        Title="Add Debtor" Height="Auto" Width="200">
+        Title="Add Debtor" Height="160" Width="200">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
@@ -23,26 +23,35 @@
         <Label Content="Add Debtor"/>
         
         <TextBox 
-                Grid.Row="1"
-                Margin="5"
-                Name="nameTextBox"
-                >Name</TextBox>
+            Grid.Column="1"
+            Grid.Row="1"
+            Margin="5"
+            Text="{Binding Path=CurrentDebtor.Name}"
+            Name="nameTextBox"/>
+        
+        <Label Grid.Row="1" Content="Name"/>
         
         <TextBox 
+            Grid.Column="1"
             Grid.Row="2"
             Margin="5"
+            Text="{Binding Path=CurrentDebtor.Balance}"
             Name="initialValueTextBox"
-            >Initial Value</TextBox>
+            />
+        
+        <Label Grid.Row="2" Content="Initial Value"/>
         
         <Button Grid.Row="3"
                 Content="Save"
                 Margin="5"
+                Click="btnOk_Click"
                 Command="{Binding SaveCommand}"/>
         
         <Button Grid.Row="3" 
                 Grid.Column="1" 
                 Content="Cancel" 
                 Margin="5"
+                IsCancel="true"
                 Command="{Binding CancelCommand}"/>
     </Grid>
 </Window>

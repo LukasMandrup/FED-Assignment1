@@ -2,6 +2,7 @@
 using System.Collections.ObjectModel;
 using System.Windows;
 using DebtBook.Models;
+using DebtBook.Views;
 using Prism.Commands;
 using Prism.Mvvm;
 using Prism.Services.Dialogs;
@@ -11,17 +12,8 @@ namespace DebtBook;
 
 public class MainWindowViewModel : BindableBase
 {
-    private IDialogService _dialogService;
-
     public MainWindowViewModel()
     {
-        
-    }
-    
-    public MainWindowViewModel(IDialogService dialogService)
-    {
-        _dialogService = dialogService;
-
         Debtors = new ObservableCollection<Debtor>();
         
         Debtors.Add(new Debtor("Alice", -100.0, new List<Transaction>()));
@@ -57,15 +49,19 @@ public class MainWindowViewModel : BindableBase
         showAddDebtorDialogCommand ??= new DelegateCommand(
             () =>
             {
-                var tempDebtor = new Debtor();
-                ((App) Application.Current).Debtor = tempDebtor;
-                _dialogService.ShowDialog("AddNewDebtorDialog", null, result =>
+                var newDebtor = new Debtor();
+                var vm = new AddDebtorDialogViewModel(newDebtor);
+
+                var dlg = new AddDebtorDialog
                 {
-                    if (result.Result == ButtonResult.OK)
-                    {
-                        Debtors.Add(((App)Application.Current).Debtor);
-                    }
-                });
+                    DataContext = vm
+                };
+
+                if (dlg.ShowDialog() == true)
+                {
+                    Debtors.Add(newDebtor);
+                    CurrentDebtor = newDebtor;
+                }
             });
 }
 

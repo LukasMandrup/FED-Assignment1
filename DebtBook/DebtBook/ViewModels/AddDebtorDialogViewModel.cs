@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Windows;
+using System.Windows.Input;
 using DebtBook.Models;
 using Prism.Commands;
 using Prism.Mvvm;
@@ -8,71 +9,46 @@ using Prism.Services.Dialogs;
 
 namespace DebtBook;
 
-public class AddDebtorDialogViewModel : BindableBase, IDialogAware
+public class AddDebtorDialogViewModel : BindableBase
 {
-    
-    public bool CanCloseDialog()
+    public AddDebtorDialogViewModel(Debtor debtor)
     {
-        return true;
+        CurrentDebtor = debtor;
     }
 
-    #region Events
-    public void OnDialogClosed()
-    {
-        throw new NotImplementedException();
-    }
-
-    public void OnDialogOpened(IDialogParameters parameters)
-    {
-        Debtor = ((App)Application.Current).Debtor;
-    }
-    
-    public event Action<IDialogResult> RequestClose;
-
-    public virtual void RaiseRequestClose(IDialogResult dialogResult)
-    {
-        RequestClose?.Invoke(dialogResult);
-    }
-
-    #endregion
-    
     #region Properties
-
-    private string title;
-    public string Title
-    {
-        get { return title; }
-        set
-        {
-            SetProperty(ref title, value);
-        }
-    }
     
-    private Debtor debtor;
-    public Debtor Debtor
+    private Debtor currentDebtor;
+    public Debtor CurrentDebtor
     {
-        get => debtor;
-        set { SetProperty(ref debtor, value); }
+        get => currentDebtor;
+        set { SetProperty(ref currentDebtor, value); }
     }
     
     #endregion
     
     #region Commands
-    private DelegateCommand<string> saveCommand;
-    public DelegateCommand<string> SaveCommand =>
-        saveCommand ??= new DelegateCommand<string>(
-            (param) =>
-            {
-                ButtonResult result = ButtonResult.None;
-                if (param?.ToLower() == "true")
-                {
-                    result = ButtonResult.OK;
-                    ((App) Application.Current).Debtor = Debtor;
-                }
-                else if (param?.ToLower() == "false")
-                    result = ButtonResult.Cancel;
+    private ICommand saveCommand;
+    public ICommand SaveCommand
+    {
+        get
+        {
+            return saveCommand ??= new DelegateCommand(
+                    () => { }, () => IsValid)
+                .ObservesProperty(() => CurrentDebtor.Name)
+                .ObservesProperty(() => CurrentDebtor.Balance);
+        }
+    }
+    
+    public bool IsValid
+    {
+        get
+        {
+            if (string.IsNullOrWhiteSpace(CurrentDebtor.Name) || CurrentDebtor.Balance == null)
+                return false;
+            return true;
+        }
+    }
 
-                RaiseRequestClose(new DialogResult(result));
-            });
     #endregion
 }

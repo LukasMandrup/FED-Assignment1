@@ -8,7 +8,9 @@
     ".NETCoreApp,Version=v6.0": {
       "DebtBook/1.0.0": {
         "dependencies": {
-          "Prism.Unity": "8.1.97"
+          "Prism.Core": "8.1.97",
+          "Prism.Unity": "8.1.97",
+          "Prism.Wpf": "8.1.97"
         },
         "runtime": {
           "DebtBook.dll": {}

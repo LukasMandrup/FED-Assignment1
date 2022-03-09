@@ -54,7 +54,7 @@
                     Content="Add"
                     HorizontalAlignment="Center" VerticalAlignment="Top"
                     Padding="5" Margin="5"
-                    Command="{Binding OpenAddDebtorDialog}"/>
+                    Command="{Binding ShowAddDebtorDialogCommand}"/>
                 
             
         </Grid>
