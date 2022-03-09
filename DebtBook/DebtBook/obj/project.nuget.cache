@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Hudo0CUWcf+RLNv09SdDXMpQyZeAq2KNVsHF7P5x/7VX3JJMpj85v6EGS++eyUrJwMDkUWQz4mgtdRq2+uvwww==",
+  "dgSpecHash": "82kh8mWJF2svtB6TppDnhKiUdcsrmH18M/EItQE86O3qyEqNKAtl4skf2cTQ6kREoEfPyWpwJ6HT+282ZGm05w==",
   "success": true,
-  "projectFilePath": "C:\\Users\\lukas\\OneDrive - Aarhus Universitet\\4. Semester\\FED\\Assignments\\Assignment1\\DebtBook\\DebtBook\\DebtBook.csproj",
+  "projectFilePath": "C:\\Users\\lukas\\OneDrive - Aarhus Universitet\\4. Semester\\FED\\Assignments\\Repo\\FED-Assignment1\\DebtBook\\DebtBook\\DebtBook.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\lukas\\.nuget\\packages\\microsoft.xaml.behaviors.wpf\\1.1.31\\microsoft.xaml.behaviors.wpf.1.1.31.nupkg.sha512",
     "C:\\Users\\lukas\\.nuget\\packages\\prism.core\\8.1.97\\prism.core.8.1.97.nupkg.sha512",

@@ -32,7 +32,6 @@
             Grid.Row="2"
             Margin="5"
             Name="initialValueTextBox"
-            Text="{Binding Amount}"
             >Initial Value</TextBox>
         
         <Button Grid.Row="3"

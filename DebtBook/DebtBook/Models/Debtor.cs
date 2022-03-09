@@ -1,8 +1,9 @@
 ﻿using System.Collections.Generic;
+using Prism.Mvvm;
 
 namespace DebtBook.Models;
 
-public class Debtor
+public class Debtor : BindableBase
 {
     private string _name;
     private double _balance;
@@ -24,10 +25,23 @@ public class Debtor
     {
         _history.Add(transaction);
     }
-    
-    public string Name { get => _name; set => _name = value; }
-    public double Balance { get => _balance; set => _balance = value; }
-    public List<Transaction> History { get => _history; set => _history = value; }
 
-    public string Type { get; set; }
+    public string Name
+    {
+        get => _name;
+        set { SetProperty(ref _name, value); }
+    }
+
+    public double Balance
+    {
+        get => _balance;
+        set { SetProperty(ref _balance, value); }
+    }
+
+    public List<Transaction> History
+    {
+        get => _history;
+        set { SetProperty(ref _history, value); }
+    }
+
 }

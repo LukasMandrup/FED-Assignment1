@@ -54,11 +54,11 @@ public class AddDebtorDialogViewModel : BindableBase, IDialogAware
                 }
                 else if (param?.ToLower() == "false")
                     result = ButtonResult.Cancel;
-                
+
                 RaiseRequestClose(new DialogResult(result));
-            }, 
-            () =>
-                    
-                )M
+            },
+            () => 
+
+        );
 
 }
