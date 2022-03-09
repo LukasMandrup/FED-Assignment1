@@ -1,0 +1,60 @@
+﻿<Window x:Class="DebtBook.Views.TransactionsDialog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:local="clr-namespace:DebtBook.Views"
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterOwner"
+        Title="Transactions History" Height="300" Width="400">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+        
+        <ListBox
+            Margin="20"
+            ItemsSource="{Binding Path=CurrentHistory, UpdateSourceTrigger=PropertyChanged}"
+            IsSynchronizedWithCurrentItem="True">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <Grid Width="135">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="4*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                            
+                        <TextBlock Text="{Binding Path=DateTime, StringFormat=dd-MM-yyyy}"/>
+                        <TextBlock 
+                            Text="{Binding Path=Amount}" 
+                            Grid.Column="1"
+                            HorizontalAlignment="Right"/>
+                    </Grid>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+        
+        <Button
+            Grid.Row="1"
+            Content="Close"
+            Margin="20"
+            Width="Auto"
+            IsCancel="true"
+            />
+        
+        <StackPanel Grid.Column="1" Margin="20">
+            <TextBox 
+                Margin="5"
+                Text="{Binding Path=TransactionAmount}"/>
+            
+            <Button Content="Add Value"
+                    Margin="5"
+                    Command="{Binding Path=AddValueCommand}"/>
+        </StackPanel>
+    </Grid>
+</Window>

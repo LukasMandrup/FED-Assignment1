@@ -23,6 +23,7 @@ public class Debtor : BindableBase
 
     public void AddTransaction(Transaction transaction)
     {
+        _balance += transaction.Amount;
         _history.Add(transaction);
     }
 
@@ -42,6 +43,11 @@ public class Debtor : BindableBase
     {
         get => _history;
         set { SetProperty(ref _history, value); }
+    }
+    
+    public Debtor Clone()
+    {
+        return this.MemberwiseClone() as Debtor;
     }
 
 }

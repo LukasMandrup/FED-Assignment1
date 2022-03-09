@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:DebtBook"
         xmlns:prism="http://prismlibrary.com/"
+        xmlns:b="http://schemas.microsoft.com/xaml/behaviors"
         mc:Ignorable="d"
         prism:ViewModelLocator.AutoWireViewModel="True"
         Title="Debt Book" Height="400" Width="420">
@@ -48,6 +49,13 @@
                         </Grid>
                     </DataTemplate>
                 </ListBox.ItemTemplate>
+                
+                <b:Interaction.Triggers>
+                    <b:EventTrigger EventName="MouseDoubleClick">
+                        <prism:InvokeCommandAction Command="{Binding EditHistory}"/>
+                    </b:EventTrigger>
+                </b:Interaction.Triggers>
+                
             </ListBox>
             
             <Button Grid.Column="1" Grid.Row="1"
