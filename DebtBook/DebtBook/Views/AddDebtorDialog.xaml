@@ -7,6 +7,7 @@
         mc:Ignorable="d"
         xmlns:prism="http://prismlibrary.com/"
         prism:ViewModelLocator.AutoWireViewModel="True"
+        WindowStartupLocation="CenterOwner"
         Title="Add Debtor" Height="160" Width="200">
     <Grid>
         <Grid.RowDefinitions>
@@ -51,7 +52,6 @@
                 Grid.Column="1" 
                 Content="Cancel" 
                 Margin="5"
-                IsCancel="true"
-                Command="{Binding CancelCommand}"/>
+                IsCancel="true"/>
     </Grid>
 </Window>
