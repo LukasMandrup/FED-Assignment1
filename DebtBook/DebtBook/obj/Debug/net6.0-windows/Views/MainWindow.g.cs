@@ -9,7 +9,6 @@
 //------------------------------------------------------------------------------
 
 using DebtBook;
-using DebtBook.Views;
 using Prism.Interactivity;
 using Prism.Ioc;
 using Prism.Mvvm;

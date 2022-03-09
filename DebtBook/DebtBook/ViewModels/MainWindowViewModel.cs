@@ -5,11 +5,18 @@ using DebtBook.Models;
 using Prism.Commands;
 using Prism.Mvvm;
 using Prism.Services.Dialogs;
+// ReSharper disable ConstantNullCoalescingCondition
 
 namespace DebtBook;
 
 public class MainWindowViewModel : BindableBase
 {
+    private IDialogService _dialogService;
+
+    public MainWindowViewModel()
+    {
+        
+    }
     
     public MainWindowViewModel(IDialogService dialogService)
     {
@@ -23,7 +30,6 @@ public class MainWindowViewModel : BindableBase
         Debtors.Add(new Debtor("Don", -1024.0, new List<Transaction>()));
     }
     
-    private IDialogService _dialogService;
     
     private ObservableCollection<Debtor> debtors;
     public ObservableCollection<Debtor> Debtors
@@ -61,7 +67,6 @@ public class MainWindowViewModel : BindableBase
                     }
                 });
             });
-    
 }
 
 

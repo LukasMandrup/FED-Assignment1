@@ -4,6 +4,7 @@ using DebtBook.Models;
 using Prism.Commands;
 using Prism.Mvvm;
 using Prism.Services.Dialogs;
+// ReSharper disable ConstantNullCoalescingCondition
 
 namespace DebtBook;
 
@@ -15,6 +16,7 @@ public class AddDebtorDialogViewModel : BindableBase, IDialogAware
         return true;
     }
 
+    #region Events
     public void OnDialogClosed()
     {
         throw new NotImplementedException();
@@ -32,19 +34,34 @@ public class AddDebtorDialogViewModel : BindableBase, IDialogAware
         RequestClose?.Invoke(dialogResult);
     }
 
-    public string Title { get; }
+    #endregion
+    
+    #region Properties
 
+    private string title;
+    public string Title
+    {
+        get { return title; }
+        set
+        {
+            SetProperty(ref title, value);
+        }
+    }
+    
     private Debtor debtor;
     public Debtor Debtor
     {
         get => debtor;
         set { SetProperty(ref debtor, value); }
     }
-
-    private DelegateCommand saveCommand;
-    public DelegateCommand SaveCommand =>
+    
+    #endregion
+    
+    #region Commands
+    private DelegateCommand<string> saveCommand;
+    public DelegateCommand<string> SaveCommand =>
         saveCommand ??= new DelegateCommand<string>(
-            (string param) =>
+            (param) =>
             {
                 ButtonResult result = ButtonResult.None;
                 if (param?.ToLower() == "true")
@@ -56,9 +73,6 @@ public class AddDebtorDialogViewModel : BindableBase, IDialogAware
                     result = ButtonResult.Cancel;
 
                 RaiseRequestClose(new DialogResult(result));
-            },
-            () => 
-
-        );
-
+            });
+    #endregion
 }
