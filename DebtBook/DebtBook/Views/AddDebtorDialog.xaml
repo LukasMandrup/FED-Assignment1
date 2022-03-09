@@ -1,0 +1,49 @@
+﻿<Window x:Class="DebtBook.Views.AddDebtorDialog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:local="clr-namespace:DebtBook.Views"
+        mc:Ignorable="d"
+        xmlns:prism="http://prismlibrary.com/"
+        prism:ViewModelLocator.AutoWireViewModel="True"
+        Title="Add Debtor" Height="Auto" Width="200">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        
+        <Label Content="Add Debtor"/>
+        
+        <TextBox 
+                Grid.Row="1"
+                Margin="5"
+                Name="nameTextBox"
+                >Name</TextBox>
+        
+        <TextBox 
+            Grid.Row="2"
+            Margin="5"
+            Name="initialValueTextBox"
+            Text="{Binding Amount}"
+            >Initial Value</TextBox>
+        
+        <Button Grid.Row="3"
+                Content="Save"
+                Margin="5"
+                Command="{Binding SaveCommand}"/>
+        
+        <Button Grid.Row="3" 
+                Grid.Column="1" 
+                Content="Cancel" 
+                Margin="5"
+                Command="{Binding CancelCommand}"/>
+    </Grid>
+</Window>
