@@ -54,8 +54,8 @@ public class TransactionsViewModel : BindableBase
                     () =>
                     {
                         CurrentHistory.Add(new Transaction(DateTime.Now, TransactionAmount));
+                        CurrentDebtor.Balance += TransactionAmount;
                         TransactionAmount = 0;
-                        //urrentDebtor.AddTransaction(new Transaction(DateTime.Now, TransactionAmount));
                     })
                 .ObservesProperty(() => CurrentIndex)
                 .ObservesProperty(() => TransactionAmount)
@@ -63,7 +63,6 @@ public class TransactionsViewModel : BindableBase
                 .ObservesProperty(() => CurrentDebtor);
         }
     }
-    
     
 
 }

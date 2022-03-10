@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.ComponentModel;
 using System.Windows;
+using DebtBook.Data;
 using DebtBook.Models;
 using DebtBook.Views;
 using Prism.Commands;
@@ -13,17 +15,9 @@ namespace DebtBook;
 
 public class MainWindowViewModel : BindableBase
 {
-    public MainWindowViewModel()
-    {
-        Debtors = new ObservableCollection<Debtor>();
-        
-        Debtors.Add(new Debtor("Alice", -100.0, new ObservableCollection<Transaction> { new (DateTime.UnixEpoch, 105)}));
-        Debtors.Add(new Debtor("Bob", 200.0, new ObservableCollection<Transaction>()));
-        Debtors.Add(new Debtor("Carol", 60.0, new ObservableCollection<Transaction>()));
-        Debtors.Add(new Debtor("Don", -1024.0, new ObservableCollection<Transaction>()));
-    }
-    
-    
+    public MainWindowViewModel() => Debtors = Repository.ReadFile();
+
+
     private ObservableCollection<Debtor> debtors;
     public ObservableCollection<Debtor> Debtors
     {
@@ -63,6 +57,7 @@ public class MainWindowViewModel : BindableBase
                     Debtors.Add(newDebtor);
                     CurrentDebtor = newDebtor;
                 }
+                Repository.SaveFile(Debtors);
             });
 
     private DelegateCommand editHistory;
@@ -84,6 +79,7 @@ public class MainWindowViewModel : BindableBase
                     Debtors[CurrentIndex] = tempDebtor;
                     CurrentDebtor = tempDebtor;
                 }
+                Repository.SaveFile(Debtors);
             }, () => CurrentIndex >= 0)
             .ObservesProperty(() => Debtors)
             .ObservesProperty(() => CurrentDebtor);

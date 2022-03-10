@@ -9,7 +9,7 @@
         xmlns:prism="http://prismlibrary.com/"
         prism:ViewModelLocator.AutoWireViewModel="True"
         WindowStartupLocation="CenterOwner"
-        Title="Transactions History" Height="300" Width="400">
+        Title="Transactions History" Height="300" Width="600">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
@@ -26,7 +26,7 @@
             IsSynchronizedWithCurrentItem="True">
             <ListBox.ItemTemplate>
                 <DataTemplate>
-                    <Grid Width="135">
+                    <Grid Width="235">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="4*"/>
                             <ColumnDefinition Width="*"/>
@@ -47,7 +47,6 @@
             Content="Close"
             Margin="20"
             Width="Auto"
-            IsDefault="True"
             Click="btnClose_Click"
             />
         
@@ -58,6 +57,7 @@
             
             <Button Content="Add Value"
                     Margin="5"
+                    IsDefault="True"
                     Command="{Binding Path=AddValueCommand}"/>
         </StackPanel>
     </Grid>

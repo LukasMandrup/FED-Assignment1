@@ -7,28 +7,26 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Serialization;
 using DebtBook.Models;
+using Newtonsoft.Json;
 
 namespace DebtBook.Data;
 
-public class Repository
+public static class Repository
 {
-    internal static ObservableCollection<Debtor> ReadFile(string fileName)
+    
+    private static readonly string path = "debtors.json";
+
+    internal static ObservableCollection<Debtor>? ReadFile()
     {
-        // Create an instance of the XmlSerializer class and specify the type of object to deserialize.
-        XmlSerializer serializer = new XmlSerializer(typeof(ObservableCollection<Debtor>));
-        TextReader reader = new StreamReader(fileName);
-        // Deserialize all the agents.
-        var debtors = (ObservableCollection<Debtor>)serializer.Deserialize(reader);
-        reader.Close();
-        return debtors;
+        var json = File.ReadAllText(path);
+        
+        return JsonConvert.DeserializeObject<ObservableCollection<Debtor>>(json);
     }
-    internal static void SaveFile(string fileName, ObservableCollection<Debtor> agents)
+    internal static void SaveFile(ObservableCollection<Debtor> debtors)
     {
-        // Create an instance of the XmlSerializer class and specify the type of object to serialize.
-        XmlSerializer serializer = new XmlSerializer(typeof(ObservableCollection<Debtor>));
-        TextWriter writer = new StreamWriter(fileName);
-        // Serialize all the agents.
-        serializer.Serialize(writer, agents);
+        TextWriter writer = new StreamWriter(path);
+        var json = JsonConvert.SerializeObject(debtors.ToList());
+        writer.WriteLine(json);
         writer.Close();
     }
 }

@@ -22,12 +22,6 @@ public class Debtor : BindableBase
         _history = new ObservableCollection<Transaction>(history);
     }
 
-    public void AddTransaction(Transaction transaction)
-    {
-        _balance += transaction.Amount;
-        _history.Add(transaction);
-    }
-
     public string Name
     {
         get => _name;
