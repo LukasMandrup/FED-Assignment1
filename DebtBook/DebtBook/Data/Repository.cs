@@ -17,12 +17,23 @@ public static class Repository
 
     internal static ObservableCollection<Debtor> ReadFile(string path)
     {
-        var json = File.ReadAllText(path);
-        
-        return JsonConvert.DeserializeObject<ObservableCollection<Debtor>>(json);
+        try
+        {
+            var json = File.ReadAllText(path);
+            return JsonConvert.DeserializeObject<ObservableCollection<Debtor>>(json);
+        }
+        catch (Exception e)
+        {
+            // No file found - Return empty list
+            return new ObservableCollection<Debtor>();
+        }
     }
+    
     internal static void SaveFile(string path, ObservableCollection<Debtor> debtors)
     {
+        if (string.IsNullOrEmpty(path))
+            return;
+        
         TextWriter writer = new StreamWriter(path);
         var json = JsonConvert.SerializeObject(debtors.ToList());
         writer.WriteLine(json);

@@ -16,7 +16,6 @@
         </Menu>
             <Grid>
             <Grid Margin="5">
-                <!-- Divide half -->
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="*"/>
@@ -68,8 +67,6 @@
                         HorizontalAlignment="Center" VerticalAlignment="Top"
                         Padding="5" Margin="5"
                         Command="{Binding ShowAddDebtorDialogCommand}"/>
-                    
-                
             </Grid>
         </Grid>
     </DockPanel>

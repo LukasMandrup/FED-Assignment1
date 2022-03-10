@@ -12,7 +12,9 @@ public class Debtor : BindableBase
 
     public Debtor()
     {
-        
+        _name = "";
+        _balance = 0.0;
+        _history = new ObservableCollection<Transaction>();
     }
         
     public Debtor(string name, double balance, ObservableCollection<Transaction> history)

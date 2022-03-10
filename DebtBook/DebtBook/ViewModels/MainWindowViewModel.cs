@@ -68,7 +68,7 @@ public class MainWindowViewModel : BindableBase
                     Debtors.Add(newDebtor);
                     CurrentDebtor = newDebtor;
                 }
-                Repository.SaveFile(Path.Combine(filePath, fileName), Debtors);
+                Repository.SaveFile(filePath, Debtors);
             });
 
     private DelegateCommand editHistory;
@@ -90,7 +90,7 @@ public class MainWindowViewModel : BindableBase
                     Debtors[CurrentIndex] = tempDebtor;
                     CurrentDebtor = tempDebtor;
                 }
-                Repository.SaveFile(Path.Combine(filePath, fileName), Debtors);
+                Repository.SaveFile(filePath, Debtors);
             }, () => CurrentIndex >= 0)
             .ObservesProperty(() => Debtors)
             .ObservesProperty(() => CurrentDebtor);
@@ -106,8 +106,8 @@ public class MainWindowViewModel : BindableBase
 
         var dialog = new SaveFileDialog
         {
-            Filter = "Agent assignment documents|*.agn|All Files|*.*",
-            DefaultExt = "agn"
+            Filter = "Debtor Data Dump|*.ddd|All Files|*.*",
+            DefaultExt = "ddd"
         };
         
         if (filePath == "")
@@ -119,7 +119,7 @@ public class MainWindowViewModel : BindableBase
         {
             filePath = dialog.FileName;
             fileName = Path.GetFileName(filePath);
-            Repository.SaveFile(Path.Combine(filePath, fileName), Debtors);
+            Repository.SaveFile(filePath, Debtors);
         }
     }
     
@@ -134,8 +134,8 @@ public class MainWindowViewModel : BindableBase
     {
         var dialog = new OpenFileDialog
         {
-            Filter = "Agent assignment documents|*.agn|All Files|*.*",
-            DefaultExt = "agn"
+            Filter = "Debtor Data Dump|*.ddd|All Files|*.*",
+            DefaultExt = "ddd"
         };
         if (filePath == "")
             dialog.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
