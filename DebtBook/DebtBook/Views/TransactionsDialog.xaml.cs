@@ -8,4 +8,9 @@ public partial class TransactionsDialog : Window
     {
         InitializeComponent();
     }
+    
+    private void btnClose_Click(object sender, RoutedEventArgs e)
+    {
+        DialogResult = true;
+    }
 }

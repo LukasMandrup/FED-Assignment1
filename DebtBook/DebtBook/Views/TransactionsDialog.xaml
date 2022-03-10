@@ -6,6 +6,8 @@
         xmlns:local="clr-namespace:DebtBook.Views"
         xmlns:b="http://schemas.microsoft.com/xaml/behaviors"
         mc:Ignorable="d"
+        xmlns:prism="http://prismlibrary.com/"
+        prism:ViewModelLocator.AutoWireViewModel="True"
         WindowStartupLocation="CenterOwner"
         Title="Transactions History" Height="300" Width="400">
     <Grid>
@@ -45,10 +47,9 @@
             Content="Close"
             Margin="20"
             Width="Auto"
-            IsCancel="true"
+            IsDefault="True"
+            Click="btnClose_Click"
             />
-        
-        
         
         <StackPanel Grid.Column="1" Margin="20">
             <TextBox 

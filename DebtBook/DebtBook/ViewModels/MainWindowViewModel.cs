@@ -17,10 +17,10 @@ public class MainWindowViewModel : BindableBase
     {
         Debtors = new ObservableCollection<Debtor>();
         
-        Debtors.Add(new Debtor("Alice", -100.0, new List<Transaction> { new (DateTime.UnixEpoch, 105)}));
-        Debtors.Add(new Debtor("Bob", 200.0, new List<Transaction>()));
-        Debtors.Add(new Debtor("Carol", 60.0, new List<Transaction>()));
-        Debtors.Add(new Debtor("Don", -1024.0, new List<Transaction>()));
+        Debtors.Add(new Debtor("Alice", -100.0, new ObservableCollection<Transaction> { new (DateTime.UnixEpoch, 105)}));
+        Debtors.Add(new Debtor("Bob", 200.0, new ObservableCollection<Transaction>()));
+        Debtors.Add(new Debtor("Carol", 60.0, new ObservableCollection<Transaction>()));
+        Debtors.Add(new Debtor("Don", -1024.0, new ObservableCollection<Transaction>()));
     }
     
     
@@ -66,7 +66,6 @@ public class MainWindowViewModel : BindableBase
             });
 
     private DelegateCommand editHistory;
-
     public DelegateCommand EditHistory =>
         editHistory ??= new DelegateCommand(
             () =>
@@ -82,9 +81,12 @@ public class MainWindowViewModel : BindableBase
 
                 if (dlg.ShowDialog() == true)
                 {
-                    CurrentDebtor.History = tempDebtor.History;
+                    Debtors[CurrentIndex] = tempDebtor;
+                    CurrentDebtor = tempDebtor;
                 }
-            }, () => CurrentIndex >= 0).ObservesProperty(() => CurrentIndex);
+            }, () => CurrentIndex >= 0)
+            .ObservesProperty(() => Debtors)
+            .ObservesProperty(() => CurrentDebtor);
 }
 
 

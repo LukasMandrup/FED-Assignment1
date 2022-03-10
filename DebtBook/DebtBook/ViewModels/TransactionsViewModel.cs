@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Windows.Input;
 using DebtBook.Models;
 using Prism.Commands;
@@ -23,8 +24,8 @@ public class TransactionsViewModel : BindableBase
         set => SetProperty(ref currentDebtor, value);
     }
     
-    private List<Transaction> currentHistory;
-    public List<Transaction> CurrentHistory
+    private ObservableCollection<Transaction> currentHistory;
+    public ObservableCollection<Transaction> CurrentHistory
     {
         get => currentHistory;
         set => SetProperty(ref currentHistory, value);
@@ -33,8 +34,8 @@ public class TransactionsViewModel : BindableBase
     private int currentIndex;
     public int CurrentIndex
     {
-        get { return currentIndex; }
-        set { SetProperty(ref currentIndex, value); }
+        get => currentIndex;
+        set => SetProperty(ref currentIndex, value);
     }
 
     private double transactionAmount;
@@ -52,7 +53,9 @@ public class TransactionsViewModel : BindableBase
             return addValueCommand ??= new DelegateCommand(
                     () =>
                     {
-                        CurrentDebtor.AddTransaction(new Transaction(DateTime.Now, TransactionAmount));
+                        CurrentHistory.Add(new Transaction(DateTime.Now, TransactionAmount));
+                        TransactionAmount = 0;
+                        //urrentDebtor.AddTransaction(new Transaction(DateTime.Now, TransactionAmount));
                     })
                 .ObservesProperty(() => CurrentIndex)
                 .ObservesProperty(() => TransactionAmount)
