@@ -4,6 +4,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:local="clr-namespace:DebtBook.Views"
+        xmlns:b="http://schemas.microsoft.com/xaml/behaviors"
         mc:Ignorable="d"
         WindowStartupLocation="CenterOwner"
         Title="Transactions History" Height="300" Width="400">
@@ -19,7 +20,7 @@
         
         <ListBox
             Margin="20"
-            ItemsSource="{Binding Path=CurrentHistory, UpdateSourceTrigger=PropertyChanged}"
+            ItemsSource="{Binding Path=CurrentHistory}"
             IsSynchronizedWithCurrentItem="True">
             <ListBox.ItemTemplate>
                 <DataTemplate>
@@ -46,6 +47,8 @@
             Width="Auto"
             IsCancel="true"
             />
+        
+        
         
         <StackPanel Grid.Column="1" Margin="20">
             <TextBox 

@@ -67,4 +67,10 @@
             
         </Grid>
     </Grid>
+    
+    <b:Interaction.Triggers>
+        <b:EventTrigger EventName="Closing">
+            <prism:InvokeCommandAction Command="{Binding WindowClosing}" CommandParameter="True" />
+        </b:EventTrigger>
+    </b:Interaction.Triggers>
 </Window>

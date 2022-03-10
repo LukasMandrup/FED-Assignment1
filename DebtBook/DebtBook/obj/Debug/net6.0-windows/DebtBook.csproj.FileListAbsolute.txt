@@ -58,3 +58,4 @@ C:\Users\lukas\OneDrive - Aarhus Universitet\4. Semester\FED\Assignments\Repo\FE
 C:\Users\lukas\OneDrive - Aarhus Universitet\4. Semester\FED\Assignments\Repo\FED-Assignment1\DebtBook\DebtBook\obj\Debug\net6.0-windows\DebtBook.genruntimeconfig.cache
 C:\Users\lukas\OneDrive - Aarhus Universitet\4. Semester\FED\Assignments\Repo\FED-Assignment1\DebtBook\DebtBook\obj\Debug\net6.0-windows\Views\TransactionsDialog.g.cs
 C:\Users\lukas\OneDrive - Aarhus Universitet\4. Semester\FED\Assignments\Repo\FED-Assignment1\DebtBook\DebtBook\obj\Debug\net6.0-windows\Views\TransactionsDialog.baml
+C:\Users\lukas\OneDrive - Aarhus Universitet\4. Semester\FED\Assignments\Repo\FED-Assignment1\DebtBook\DebtBook\obj\Debug\net6.0-windows\App.baml

@@ -28,6 +28,7 @@ public class AddDebtorDialogViewModel : BindableBase
     #endregion
     
     #region Commands
+    
     private ICommand saveCommand;
     public ICommand SaveCommand
     {
