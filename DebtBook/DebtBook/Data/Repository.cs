@@ -13,16 +13,15 @@ namespace DebtBook.Data;
 
 public static class Repository
 {
-    
-    private static readonly string path = "debtors.json";
+    public static readonly string DebtorsPath = "debtors.json";
 
-    internal static ObservableCollection<Debtor>? ReadFile()
+    internal static ObservableCollection<Debtor> ReadFile(string path)
     {
         var json = File.ReadAllText(path);
         
         return JsonConvert.DeserializeObject<ObservableCollection<Debtor>>(json);
     }
-    internal static void SaveFile(ObservableCollection<Debtor> debtors)
+    internal static void SaveFile(string path, ObservableCollection<Debtor> debtors)
     {
         TextWriter writer = new StreamWriter(path);
         var json = JsonConvert.SerializeObject(debtors.ToList());

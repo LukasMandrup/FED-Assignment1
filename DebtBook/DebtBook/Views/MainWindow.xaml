@@ -9,62 +9,68 @@
         mc:Ignorable="d"
         prism:ViewModelLocator.AutoWireViewModel="True"
         Title="Debt Book" Height="400" Width="420">
-    <Grid>
-        <Grid Margin="5">
-            <!-- Divide half -->
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
-            </Grid.ColumnDefinitions>
-            
-            <Grid.RowDefinitions>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="8*"/>
-                <RowDefinition Height="3*"/>
-            </Grid.RowDefinitions>
-            
-            <Label Content="Debtors"/>
+    <DockPanel>
+        <Menu DockPanel.Dock="Top">
+            <MenuItem Header="Save _As..." Command="{Binding SaveAsCommand}" Background="White"/>
+            <MenuItem Header="_Open..." Command="{Binding OpenFileCommand}" Background="White"/> 
+        </Menu>
+            <Grid>
+            <Grid Margin="5">
+                <!-- Divide half -->
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
                 
-            <ListBox Grid.Row="1" 
-                     Grid.Column="0"
-                     Margin="5"
-                     ItemsSource="{Binding Path=Debtors}"
-                     SelectedItem="{Binding Path=CurrentDebtor}"
-                     SelectedIndex="{Binding Path=CurrentIndex}"
-                     IsSynchronizedWithCurrentItem="True"
-                     >
-                <ListBox.ItemTemplate>
-                    <DataTemplate>
-                        <Grid Width="170">
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="4*"/>
-                                <ColumnDefinition Width="*"/>
-                            </Grid.ColumnDefinitions>
-                            
-                            <TextBlock Text="{Binding Path=Name}"/>
-                            <TextBlock 
-                                Text="{Binding Path=Balance}" 
-                                Grid.Column="1"
-                                HorizontalAlignment="Right"/>
-                        </Grid>
-                    </DataTemplate>
-                </ListBox.ItemTemplate>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="8*"/>
+                    <RowDefinition Height="3*"/>
+                </Grid.RowDefinitions>
                 
-                <b:Interaction.Triggers>
-                    <b:EventTrigger EventName="MouseDoubleClick">
-                        <prism:InvokeCommandAction Command="{Binding EditHistory}"/>
-                    </b:EventTrigger>
-                </b:Interaction.Triggers>
+                <Label Content="Debtors" Height="40"/>
+                    
+                <ListBox Grid.Row="1" 
+                         Grid.Column="0"
+                         Margin="5"
+                         ItemsSource="{Binding Path=Debtors}"
+                         SelectedItem="{Binding Path=CurrentDebtor}"
+                         SelectedIndex="{Binding Path=CurrentIndex}"
+                         IsSynchronizedWithCurrentItem="True"
+                         >
+                    <ListBox.ItemTemplate>
+                        <DataTemplate>
+                            <Grid Width="170">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="4*"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                
+                                <TextBlock Text="{Binding Path=Name}"/>
+                                <TextBlock 
+                                    Text="{Binding Path=Balance}" 
+                                    Grid.Column="1"
+                                    HorizontalAlignment="Right"/>
+                            </Grid>
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                    
+                    <b:Interaction.Triggers>
+                        <b:EventTrigger EventName="MouseDoubleClick">
+                            <prism:InvokeCommandAction Command="{Binding EditHistory}"/>
+                        </b:EventTrigger>
+                    </b:Interaction.Triggers>
+                    
+                </ListBox>
                 
-            </ListBox>
-            
-            <Button Grid.Column="1" Grid.Row="1"
-                    Content="Add"
-                    HorizontalAlignment="Center" VerticalAlignment="Top"
-                    Padding="5" Margin="5"
-                    Command="{Binding ShowAddDebtorDialogCommand}"/>
+                <Button Grid.Column="1" Grid.Row="1"
+                        Content="Add"
+                        HorizontalAlignment="Center" VerticalAlignment="Top"
+                        Padding="5" Margin="5"
+                        Command="{Binding ShowAddDebtorDialogCommand}"/>
+                    
                 
-            
+            </Grid>
         </Grid>
-    </Grid>
+    </DockPanel>
 </Window>
